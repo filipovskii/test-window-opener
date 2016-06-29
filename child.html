@@ -1,0 +1,21 @@
+<body>
+  <div id="content">
+    <h3>Text from the previous page:</h3>
+    <h3 id="r"></h3>
+  </div>
+
+  <button>Close</button>
+  <script>
+    if (!window.opener) {
+      content.innerHTML = '<h3>Opener window not found</h3>';
+    }
+
+    if (window.opener) {
+      r.innerText = window.opener.i.value;
+    }
+
+    document.querySelector('button').addEventListener('click', function() {
+      window.close();
+    });
+  </script>
+</body>
